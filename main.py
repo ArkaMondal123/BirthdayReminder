@@ -49,10 +49,7 @@ for i in birthdays.keys():
 	if list(map(int, i.split("/"))) == list(map(int, check_str.split('/'))):
 		datetime_india = datetime.now(pytz.timezone('Asia/Kolkata'))
 		t = list(map(int, datetime_india.strftime('%H:%M').split(":")))
-		if check_str == "4/15" or check_str == "5/15":
-			pywhatkit.sendwhatmsg(birthdays[check_str], "its brocode's birthday", t[0], t[1]+2)
-		else:
-			pywhatkit.sendwhatmsg(birthdays[check_str], "Happy birthday bro", t[0], t[1]+2)
+		pywhatkit.sendwhatmsg(birthdays[check_str], "Happy birthday", t[0], t[1]+2)
 
 
 
